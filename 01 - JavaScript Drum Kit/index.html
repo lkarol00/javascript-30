@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="keys">
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">Rachel</span>
+    </div>
+    <div data-key="82" class="key">
+      <kbd>R</kbd>
+      <span class="sound">Joey</span>
+    </div>
+    <div data-key="73" class="key">
+      <kbd>I</kbd>
+      <span class="sound">Phoebe</span>
+    </div>
+    <div data-key="69" class="key">
+      <kbd>E</kbd>
+      <span class="sound">Ross</span>
+    </div>
+    <div data-key="78" class="key">
+      <kbd>N</kbd>
+      <span class="sound">Monica</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">Chandler</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">Janice</span>
+    </div>
+  </div>
+
+
+  <audio data-key="70" src="sounds/rachel.mp3"></audio>
+  <audio data-key="82" src="sounds/joey.mp3"></audio>
+  <audio data-key="73" src="sounds/phoebe.mp3"></audio>
+  <audio data-key="69" src="sounds/ross.mp3"></audio>
+  <audio data-key="78" src="sounds/monica.mp3"></audio>
+  <audio data-key="68" src="sounds/chandler.mp3"></audio>
+  <audio data-key="83" src="sounds/janice.mp3"></audio>
+
+<script>
+    
+    function playSound(e){
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        if (!audio) return; //stop the function from running all together
+        audio.currentTime = 0; //rewind to the start 
+        audio.play();
+        key.classList.add('playing');
+    }
+
+    function removeTransition(e){
+        if (e.propertyName !== "transform") return; //skip if is not transform
+        this.classList.remove('playing');
+        
+    }
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+
+    
+</script>
+
+
+</body>
+</html>
