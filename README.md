@@ -1,2 +1,2 @@
-# Javascript 30 Challenge 🌟
+# JavaScript 30 Challenge 🌟
 Codex UdeA
