@@ -1,0 +1,61 @@
+html {
+    background: #018DED url(https://i.pinimg.com/originals/27/06/75/270675f04a046b36543d044997dfc3aa.jpg);
+    background-size: cover;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.clock {
+    background: url(https://img0.liveinternet.ru/images/attach/c/0/113/338/113338122_large_4964063_2818820218829c89a55fb4108b6e3096__.jpg) center;
+    background-size: cover;
+    width: 40rem;
+    height: 40rem;
+    border: 3px solid rgba(59, 7, 7, 0.877);
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+      0 0 0 4px rgba(0,0,0,0.1),
+      inset 0 0 0 3px #EFEFEF,
+      inset 0 0 10px black,
+      0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.01s;
+    transition-timing-function: cubic-bezier(0, 2.17, 0.58, 1);
+}
+
+.min-hand{
+    height: 4px;
+}
+
+.second-hand{
+    height: 2.5px;
+    background-color: red;
+}
