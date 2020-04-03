@@ -20,4 +20,3 @@ function setDate(){
 }
 
 setInterval(setDate, 1000);
-audio.play();
