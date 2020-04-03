@@ -1,0 +1,64 @@
+html {
+    font-size: 10px;
+    background: url(https://wallpaperstock.net/wallpapers/thumbs1/48384hd.jpg);
+    background-size: cover;
+    text-align: center;
+    font-family: "Candara", Verdana;
+}
+
+.cont1{
+    display:flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.cont{
+    background-color:#FFFFFF;
+    opacity: 0.95;
+    width: 580px;
+    border-style: double;
+    border-color: rgb(41, 146, 129);
+    border-width: 10px;
+    border-radius: 2%;
+}
+
+h1{
+    color: rgb(14, 142, 151);
+    font-size: 50px;
+}
+
+h2{
+    color: rgb(60, 149, 172);
+    font-size: 25px;
+}
+
+h3{
+    font-style: italic;
+    font-size: 18px;
+    color: rgb(20, 119, 86);
+}
+
+.item-link{
+    font-family: cursive;
+    font-size: 20px;
+    color: rgb(7, 121, 115);
+    line-height: 27px;
+}
+
+.a-link{
+    color: rgb(49, 196, 164);
+}
+
+.a-bottom{
+    color: rgb(20, 119, 86);
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+}
+
+ul{
+    padding-inline-start: 0px;
+}
+
