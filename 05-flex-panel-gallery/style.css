@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    background: #ffc600;
+    background: #091b4b;
     font-family: 'helvetica neue';
     font-size: 20px;
     font-weight: 200;
@@ -42,11 +42,10 @@ body {
     flex: 1;
 }
 
-.panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
-.panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
-.panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
-.panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
-.panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+.panel1 { background-image:url(https://www.itl.cat/pngfile/big/11-119281_japanese-cherry-blossom-garden-wallpaper-nice-wallpapers-of.jpg); }
+.panel2 { background-image:url(https://www.lavanguardia.com/r/GODO/LV/p6/WebSite/2019/05/23/Recortada/img_mbigas_20190524-150250_imagenes_lv_terceros_tatra1-kzOB-U462422176184CcE-992x558@LaVanguardia-Web.jpg); }
+.panel3 { background-image:url(https://primavra21.files.wordpress.com/2014/03/hojas_de_otono.jpg); }
+.panel4 { background-image:url(https://www.america-retail.com/static//2018/07/invierno.jpg); }
 
   /* Flex Items */
 .panel > * {
