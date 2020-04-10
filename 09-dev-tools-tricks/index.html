@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <h7>Press ctrl + shift + i</h7>
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('hello');
+
+    // Interpolated
+    console.log('Hello I am a %s string', '🔥');
+
+    // Styled
+    console.log('%c I am some awesome text', 'font-style: italic; text-shadow: 0px 2px 0 blue;');
+
+    // warning!
+    console.warn('This is bad D: I am a warn');
+
+    // Error :|
+    console.error('This is even more bad DD: you should run! I am an error')
+
+    // Info
+    console.info('You can not go out yet :c I am information');
+
+    // Testing
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('hi'), 'It does not say hi :o and I am an assert')
+
+    // clearing
+    //console.clear();
+
+    // Viewing DOM Elements
+    console.log(p, 'This the element p that you are looking on the page c:');
+    console.log('This has a lot of information about p');
+    console.dir(p);
+
+    // Grouping together
+    console.log('These are groups');
+    dogs.forEach(dog =>{
+        console.groupCollapsed(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+        console.groupEnd(`${dog.name}`);
+    });
+
+    // counting
+    console.log('This is a weird way of counting something');
+    console.count('lol');
+    console.count('lel');
+    console.count('lol');
+    console.count('lol');
+    console.count('lel');
+    console.count('lol');
+    console.count('lel');
+    console.count('lel');
+
+    // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/lkarol00')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+        console.log('This is a way to know how long was this method')
+      });
+    
+    console.table(dogs);
+    console.log('If you want to delete all this, type console.clear()');
+
+  </script>
+</body>
+</html>
