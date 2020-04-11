@@ -36,6 +36,8 @@ function controlBackgrounColor(){
         if(colors.includes('blue') && colors.includes('white')) document.documentElement.style.setProperty(`--background-color`, '#98E8FF');
     }
     if(colors.length === 1) document.documentElement.style.setProperty(`--background-color`, colors[0]);
+    if(colors.length === 0) document.documentElement.style.setProperty(`--background-color`, 'black');
+
     colors = [];
 }
 
