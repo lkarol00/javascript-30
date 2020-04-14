@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    background: #00ff80;
+    background: #00bb5d;
     font-family: cursive;
     font-size: 20px;
     font-weight: 200;
@@ -17,14 +17,14 @@ body {
 h1 {
     margin-top: 0;
     text-align: center;
-    text-shadow: 2px 2px #00ff80;
+    text-shadow: 2px 2px #00bb5d;
 }
 
 .site-wrap {
     max-width: 700px;
     height: 2744px;
     margin: 50px auto;
-    background: rgb(195, 255, 252);
+    background: rgb(153, 247, 240);
     padding: 30px;
     text-align: justify;
     border-radius: 10px;
