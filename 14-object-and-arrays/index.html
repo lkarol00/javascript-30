@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Reference VS Copy</title>
+</head>
+<body>
+
+    <h3 style="font-family: cursive; color:rgb(100, 10, 184)">Press ctrl + shift + i ✨</h3>
+
+    <script>
+        console.log('%c With variables', 'background: black; color: white');
+        console.info('If you want to asign a value to a variable, this is what will happen');
+        let number = 100;
+        let number2 = 200;
+        console.log(number, number2);
+        console.info('If you change the value of second variable, this will be the result');
+        number2 = 100;
+        console.log(number, number2);
+        
+        console.info('The same thing happens when you try it with strings');
+        let name = 'karol';
+        let name2 = name;
+        console.log(name, name2);
+        name = 'karoline';
+        console.log(name, name2);
+        
+        console.log('');
+        console.info('%cBut, what if we try it with an array?', 'background: black; color: white');
+        const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+
+        console.info('We try to copy players to team, doing team = players and we have this result');
+        const team = players;
+        console.log(team, players);
+
+        console.info('So, if we want to change a value from team, it will look like this:');
+        team[3] = 'Julian';
+
+        console.log(team);
+        
+        console.info("But, what will happen with players array? Let's see");
+        console.log(players);
+        
+        console.info("😲 It has been changed too. How do we resolve this?");
+        console.info("We didn't copy the players array 😥, we just make a reference, if we want to make a copy, there are some options:");
+
+        console.info("%c-Using the method .slice()", 'background: blue; color: white');
+        const team2 = players.slice();
+        team2[2] = 'Danny';
+        console.log(team2);
+
+        console.info("%c-Creating a new array and concat players", 'background: blue; color: white');
+        const team3 = [].concat(players);
+        team3[1] = 'Jean';
+        console.log(team3);
+
+        console.info("%c-Using the new ES6 Spread", 'background: blue; color: white');
+        const team4 = [...players];
+        team4[0] = 'Alice';
+        console.log(team4);
+
+        console.info('And players keep the same: ', players);
+
+        console.log('');
+        console.info('%cWith objects is the same thing', 'background: black; color: white');
+        const person = {
+        name: 'Wes Bos',
+        age: 80
+        };
+
+        console.log('This is person', person, 'if we make captain = person, and we add a property to captain');    
+        const captain = person;
+        captain.number = 99;
+        console.log('This will be person', person, 'and again, it is changed');
+
+        console.info('The right way is using Object.assign()');
+        const captain2 = Object.assign({}, person, {year: 1900});
+        console.log('Now, we assign a value to ', captain2);
+        console.log('But person is the same ', person);
+        console.info('Note: This method only works 1 level deep');
+        console.info('You could use a JSON to made but is not recommended');
+        const captain3 = JSON.parse(JSON.stringify(person));
+    </script>
+
+</body>
+</html>
