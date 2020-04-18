@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: url("https://media.istockphoto.com/vectors/eiffel-tower-seamless-pattern-french-vector-background-vintage-fabric-vector-id922718476");
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1{
+    font-size: 65px;
+    font-style: italic;
+    color:  rgb(17, 1, 9);
+    text-align: center;
+    font-family: '';
+    text-shadow: 2px 4px 0 rgb(255, 127, 191), 
+                 8px 4px 0 rgb(77, 229, 235),
+                 10px 10px 0 rgb(255, 255, 255);
+}
+
+#restaurants {
+    list-style: inside square;
+    font-size: 20px;
+    background: white;
+    width: 500px;
+    margin: auto;
+    padding: 0;
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#restaurants li {
+    border-bottom: 1px solid #efefef;
+    padding: 20px;
+}
+
+#restaurants li:last-child {
+    border-bottom: 0;
+}
+
+a {
+    color: #ffc600;
+    text-decoration: none;
+}

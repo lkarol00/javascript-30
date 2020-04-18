@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sort Without Articles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Restaurants français</h1>
+    <ul id="restaurants"></ul>
+
+<script>
+    function strip(restaurantName) {
+        return restaurantName.replace(/^(La |Le |Les |L')/i, '').trim();
+    }
+
+    const frenchRestaurants = ['Adventureland Bazaar', 'Alex', 'Les Amis', "L'Arpège", "L'Atelier de Joël Robuchon", "L'Atelier de Joël Robuchon (Bangkok)",'Bagatelle restaurant','Balthazar','Baumé Restaurant','Le Bec-Fin','Le Bernardin','Berowra Waters Inn','Bistro 990','Bistro Moncur','Bouchon','Bouley','Brasserie Julien',"Broussard's",'Café Boulud','Cafe Chambord','Café des Artistes','Café Rouge','Café Royal','Caprice','Carlyle Restaurant','Alain Chapel','Chez Dominique','Chez Paul','Le Cirque','Corton','La Côte Basque',"L'Entrecôte","L'Express",'Les Créations de Narisawa','Daniel','Eleven Madison Park','La Ferme de Mon Père','Fleur de Lys',"Fouquet's" ,"Gaddi's","Galatoire's",'Le Gavroche','La Grenouille','Jean Georges','Joël Robuchon (Las Vegas)','Locke-Ober','Lumière','Lutèce','Lutèce (Las Vegas)','La Madeleine','Maison Novelli','Le Manoir aux Quat', "Saisons",'Mas',"Masa's Wine Bar & Kitchen","Maxim's Paris","Mimi's Cafe",'One If By Land, Two If By Sea Restaurant',"L'Opéra restaurant",'Le Papillon','Pâtisserie','Le Pavillon','Per Se',"Philippe's",'Pied à Terre','Pierre','Restaurant André','Rhubarb Le Restaurant','RIA','Seinpost','Sketch','La Société','La Tante Claire','Tom Aikens','Tru'];
+    const sortedRestaurants = frenchRestaurants.sort((a,b) => strip(a) > strip(b) ? 1 : -1);
+
+    document.querySelector('#restaurants').innerHTML = sortedRestaurants.map(band => `<li>${band}</li>`).join('');
+
+</script>
+
+</body>
+</html>
