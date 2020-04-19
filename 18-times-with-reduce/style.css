@@ -1,0 +1,26 @@
+body{
+    background: rgb(75, 223, 95);
+    font-family: cursive;
+    font-style: italic;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+}
+
+.videos{
+    border-radius: 20px;
+    width: 360px;
+    background-color:rgb(195, 217, 224);
+    padding: 0;
+}
+
+.total{
+    border-radius: 20px;
+    width: 360px;
+    background-color:rgb(207, 196, 218);
+}
+
+ul{
+    list-style: square;
+}
