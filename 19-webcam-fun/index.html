@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get User Media Code Along!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+
+  <div class="photobooth">
+    <div class="controls">
+        <div class="rgb">
+            <label for="rmin">Red Min </label>
+            <input type="range" min=0 max=255 name="rmin">
+            <label for="rmax">Red Max </label>
+            <input type="range" min=0 max=255 name="rmax">
+            <br>
+            <label for="gmin">Green Min </label>
+            <input type="range" min=0 max=255 name="gmin">
+            <label for="gmax">Green Max </label>
+            <input type="range" min=0 max=255 name="gmax">
+            <br>
+            <label for="bmin">Blue Min </label>
+            <input type="range" min=0 max=255 name="bmin">
+            <label for="bmax">Blue Max </label>
+            <input type="range" min=0 max=255 name="bmax">
+        </div>
+        <br>
+        <div clas="effects">
+            <label for="redEffect">Red Effect</label>
+            <input class="redEffect" type="checkbox" name="redEffect">
+            <label for="redEffect">Vintage Effect</label>
+            <input class="vintageEffect" type="checkbox" name="vintageEffect">
+            <button onClick="takePhoto()">Take Photo</button>
+            <br>
+        </div>
+    </div>
+
+    <canvas class="photo"></canvas>
+    <h4>Click the pictures and they will download 😲</h4>
+    <video class="player"></video>
+    <div class="strip"></div>
+  </div>
+
+  <audio class="snap" src="https://wesbos.com/demos/photobooth/snap.mp3" hidden></audio>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
