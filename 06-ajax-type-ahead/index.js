@@ -1,4 +1,4 @@
-const endpoint = 'https://raw.githubusercontent.com/amio/emoji.json/master/emoji.json'; //https://raw.githubusercontent.com/adambom/dictionary/master/dictionary.json //https://rickandmortyapi.com/api/character/
+const endpoint = 'emoji.json';
 let emojis = [];
 fetch(endpoint)
     .then(blob => blob.json())
