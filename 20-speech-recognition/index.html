@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speech Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="words" contenteditable>
+      <h2>Say something! 🌟</h2>
+      <h7>Everything you say will be copied here 😲</h7><br>
+      <h7><b><i>Note:</b> if you say an emoji name, they will appear</i> 😎</h7><br>
+      <h7>For example, say:</h7><br>
+      <ul>
+          <li>Unicorn</li>
+          <li>Moon</li>
+          <li>Watermelon</li>
+          <li>Alien</li>
+          <li>Face</li>
+      </ul>
+
+  </div>
+
+<script>
+    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    recognition.interimResults = true;
+
+    let p = document.createElement('p');
+    const words = document.querySelector('.words');
+    let pEmoji =  document.createElement('p');
+    words.appendChild(p);
+
+    const endpoint = 'emojis.json'; 
+    let emojis = [];
+    fetch(endpoint)
+        .then(blob => blob.json())
+        .then(data => emojis.push(...data));
+    
+
+    recognition.addEventListener('result', e => {
+        const transcript = Array.from(e.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+            .join('');
+        p.textContent = transcript;
+        if(e.results[0].isFinal) {
+            listEmojis = [];
+            p = document.createElement('p');
+            
+            emojis.forEach(emoji => {
+                if(emoji.name.includes(transcript.toLowerCase()) || transcript.toLowerCase().includes(emoji.name))listEmojis.push(emoji.char);
+            });
+            pEmoji.textContent = listEmojis;
+            pEmoji = document.createElement('p');
+            words.appendChild(p);
+            words.appendChild(pEmoji);
+        }
+    });
+
+    recognition.addEventListener('end', recognition.start);
+    recognition.start();
+</script>
+
+</body>
+</html>
