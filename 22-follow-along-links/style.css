@@ -16,7 +16,7 @@ body {
     linear-gradient(225deg, rgb(94, 235, 211) 10%, hsla(140, 90%, 50%, 0) 80%),
     linear-gradient(315deg, rgb(45, 88, 214) 100%, hsla(35, 95%, 55%, 0) 70%);
 }
-
+ 
 .wrapper {
     margin: 0 auto;
     max-width: 410px;
