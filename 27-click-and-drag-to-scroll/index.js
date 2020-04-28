@@ -8,8 +8,6 @@ slider.addEventListener('mousedown', (e) => {
     slider.classList.add('active');
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
-    console.log(startX);
-    
 });
 
 slider.addEventListener('mouseleave', () => {
