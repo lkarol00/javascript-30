@@ -4,7 +4,7 @@ const moles = document.querySelectorAll('.mole');
 const scoreList = JSON.parse(localStorage.getItem('scoreList')) || [];
 const highscoreList = document.querySelector('.highscore-list');
 const maxHighscore = document.querySelector('.max-highscore');
-let maxScore = Math.max(...scoreList);
+let maxScore = scoreList.length === 0 ? 0 : Math.max(...scoreList);
 let lastHole;
 let timeOut = false;
 let score = 0;
